@@ -1,5 +1,6 @@
-import Navbar from './Navbar'
-import '../styles/global.css'
+import React from 'react';
+import Navbar from '../routes/navbar';
+import "../styles/global-styles.scss";
 
 export default function Layout({ children }) {
   return (

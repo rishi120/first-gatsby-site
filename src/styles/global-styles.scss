@@ -21,6 +21,11 @@ body {
     background-repeat: no-repeat;
 }
 
+p {
+    margin: 16px auto;
+    line-height: 1.5em;
+}
+
 /* layout & nav */
 .layout {
     max-width: 1200px;
@@ -39,7 +44,8 @@ body {
         a {
             display: inline-block;
             margin-left: 20px;
-            font-weight: 400;
+            font-weight: 600;
+            font-size: 15px;
             padding-bottom: 8px;
             border-bottom: 3px solid transparent;
         }

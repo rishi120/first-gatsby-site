@@ -5,11 +5,11 @@
     align-items: center;
 
     h2 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     h3 {
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 400;
         margin-bottom: 20px;
     }
@@ -19,7 +19,18 @@
         background: #D42990;
         padding: 10px 16px;
         border-radius: 10px;
-        margin-top: 20px;
         font-weight: 500;
     }
+
+    .imgWrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            width: 75%;
+            margin-right: 0;
+        }
+    }
+
+
 }

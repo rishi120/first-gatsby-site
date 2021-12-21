@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from 'gatsby'
 import Layout from "../components/layout"
-import styles from "../styles/home.module.scss"
+import * as styles from "../styles/home.module.scss"
 
 // markup
 const IndexPage = () => {
@@ -11,10 +11,13 @@ const IndexPage = () => {
         <div>
           <h2>Chandan Baruah</h2>
           <h3>Develop & Deploy</h3>
-          <p>Software Engineer based in India.</p>
-          <Link className={styles.btn} to="/portfolio">My Portfolio Projects</Link>
+          <p>Software Engineer(UI) based in India.</p>
+          <Link to="/portfolio" className={styles.btn}>My Portfolio</Link>
         </div>
-        <img src="/static/banner.png" alt="site banner" style={{ maxWidth: '100%' }} />
+        <div className={styles.imgWrapper}>
+          <img src="/banner.png" alt="site banner" />
+        </div>
+
       </section>
     </Layout>
   )

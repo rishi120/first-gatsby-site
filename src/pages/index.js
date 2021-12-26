@@ -5,20 +5,19 @@ import * as styles from "../styles/home.module.scss"
 
 // markup
 const IndexPage = ({ data }) => {
-  const { designation, name, subtitle } = data.site.siteMetadata
+  const { designation, name, desciption } = data.site.siteMetadata
   return (
     <Layout>
       <section className={styles.header}>
         <div>
           <h2>{name}</h2>
-          <h3>{subtitle}</h3>
-          <p>{designation} based in India.</p>
+          <h3>{designation}</h3>
+          <p>{desciption}</p>
           <Link to="/portfolio" className={styles.btn}>My Portfolio</Link>
         </div>
         <div className={styles.imgWrapper}>
           <img src="/banner.png" alt="site banner" />
         </div>
-
       </section>
     </Layout>
   )
@@ -27,13 +26,13 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 // graphql page query without using useStatic hook
 export const query = graphql`
-  query SiteInfo {
-    site {
-      siteMetadata {
-        designation
-        name
-        subtitle
-      }
+query MyQuery {
+  site {
+    siteMetadata {
+      desciption
+      designation
+      name
     }
   }
+}
 `

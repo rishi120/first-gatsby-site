@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../routes/navbar';
 import "../styles/global-styles.scss";
 import { useStaticQuery, graphql } from 'gatsby';
@@ -19,10 +19,15 @@ export default function Layout({ children }) {
         }
         `
   )
+  useEffect(() => {
+    const urlPath = window.location.pathname;
+    setActive(urlPath);
+  }, [])
+
   const { navMenu } = data.site.siteMetadata;
   return (
     <div className="layout">
-      <Navbar navMenu={navMenu} />
+      <Navbar navMenu={navMenu} active={active} />
       <div className="content">
         {children}
       </div>

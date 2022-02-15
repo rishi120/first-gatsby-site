@@ -19,7 +19,33 @@ module.exports = {
       {
         navTitle: "Portfolio",
         navPath: "/portfolio"
-      }]
+      }],
+    portfolioDetails: [
+      {
+        cardHeading: "Project 1",
+        cardDescription: "lorem ipsum dummy text"
+      },
+      {
+        cardHeading: "Project 2",
+        cardDescription: "lorem ipsum dummy text"
+      },
+      {
+        cardHeading: "Project 3",
+        cardDescription: "lorem ipsum dummy text"
+      },
+      {
+        cardHeading: "Project 4",
+        cardDescription: "lorem ipsum dummy text"
+      },
+      {
+        cardHeading: "Project 5",
+        cardDescription: "lorem ipsum dummy text"
+      },
+      {
+        cardHeading: "Project 6",
+        cardDescription: "lorem ipsum dummy text"
+      },
+    ]
   },
   plugins: [`gatsby-plugin-sass`],
 };

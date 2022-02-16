@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <section className={styles.header}>
         <div>
-          <h2>{name}</h2>
+          <h2 className="ext-3xl font-bold">{name}</h2>
           <h3>{designation}</h3>
           <p>{desciption}</p>
           <Link to="/portfolio" className={styles.btn}>My Portfolio</Link>

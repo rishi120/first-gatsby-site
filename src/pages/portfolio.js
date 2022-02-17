@@ -24,9 +24,9 @@ const Portfolio = () => {
             <div>
                 <h1>Portfolio</h1>
                 <div className={styles.container}>
-                    {portfolioDetails.map(cardData => {
+                    {portfolioDetails.map((cardData, i) => {
                         return (
-                            <div className={styles.cardWrapper + " shadow-lg bg-white"}>
+                            <div className={styles.cardWrapper + " shadow-lg bg-white"} key={i}>
                                 <p className='text-black text-sm text-center'>{cardData.cardDescription}</p>
                                 <h1 className="font-bold text-black text-xl">{cardData.cardHeading}</h1>
                             </div>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Layout from "../components/layout"
 import { useStaticQuery, graphql } from 'gatsby';
 import * as styles from "../styles/portfolio.module.scss";
-import { gsap } from "gsap";
+import { portfolioPageAnimation } from "../gsap-animation";
 
 const Portfolio = () => {
     // implemented useStaticQuery hooks
@@ -20,16 +20,11 @@ const Portfolio = () => {
         `
     )
     const { portfolioDetails } = portfolioData.site.siteMetadata;
-    const selectCardWrapper = ".animateCardWrapper";
+
 
     useEffect(() => {
-        gsap.from(selectCardWrapper, {
-            y: 50,
-            delay: 0.1,
-            duration: 0.5,
-            stagger: 0.2,
-            opacity: 0
-        });
+        portfolioPageAnimation(".animateCardWrapper");
+
     }, [])
     return (
         <Layout>

@@ -2,30 +2,14 @@ import React, { useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import Layout from "../components/layout"
 import * as styles from "../styles/home.module.scss"
-import { gsap } from "gsap";
+import { homePageAnimation } from "../gsap-animation";
 
 // markup
 const IndexPage = ({ data }) => {
   const { designation, name, desciption } = data.site.siteMetadata
-  const elementSelectors = [".headingAnimation", ".animateDesignation"];
-
-  const masterTimeline = gsap.timeline({
-    defaults: {
-      delay: 0.1,
-      duration: 0.5,
-      clipPath: 'inset(0 0 100% 0)'
-    },
-  });
 
   useEffect(() => {
-    elementSelectors.map((animateSelectedElements) => {
-      masterTimeline.from(animateSelectedElements, {
-        y: -50
-      });
-      return () => {
-        masterTimeline.kill();
-      }
-    });
+    homePageAnimation(".headingAnimation", ".animateDesignation");
   }, [])
 
   return (

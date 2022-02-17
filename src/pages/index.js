@@ -13,14 +13,14 @@ const IndexPage = ({ data }) => {
     defaults: {
       delay: 0.1,
       duration: 0.5,
-      opacity: 0
+      clipPath: 'inset(0 0 100% 0)'
     },
   });
 
   useEffect(() => {
     elementSelectors.map((animateSelectedElements) => {
       masterTimeline.from(animateSelectedElements, {
-        clipPath: 'inset(0 0 100% 0)', y: -50
+        y: -50
       });
       return () => {
         masterTimeline.kill();

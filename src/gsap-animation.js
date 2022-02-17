@@ -12,7 +12,6 @@ export const homePageAnimation = (headingAnimation, animateDesignation) => {
             clipPath: 'inset(0 0 100% 0)'
         },
     });
-
     elementSelectors.map((animateSelectedElements) => {
         masterTimeline.from(animateSelectedElements, {
             y: -50
@@ -28,8 +27,8 @@ export const portfolioPageAnimation = (animateCardWrapper) => {
     gsap.from(selectCardWrapper, {
         y: 50,
         delay: 0.1,
-        duration: 0.5,
-        stagger: 0.2,
+        duration: 0.8,
+        stagger: 0.1,
         opacity: 0
     });
 }

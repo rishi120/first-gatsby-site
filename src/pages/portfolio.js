@@ -24,7 +24,6 @@ const Portfolio = () => {
 
     useEffect(() => {
         portfolioPageAnimation(".animateCardWrapper");
-
     }, [])
     return (
         <Layout>

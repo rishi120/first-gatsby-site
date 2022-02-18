@@ -3,11 +3,11 @@ import { Link } from 'gatsby'
 
 export default function Navbar({ navMenu, active, handleNavLink }) {
   return (
-    <nav>
+    <nav className='flex justify-between'>
       <h1 className='font-bold text-3xl'>Web Warrior</h1>
-      <div className="links">
+      <div className="inline-block text-right">
         {navMenu.map((menuItems, index) => {
-          return <Link to={menuItems.navPath} key={index} className={active == menuItems.navPath ? "active" : ""}>{menuItems.navTitle}</Link>
+          return <Link to={menuItems.navPath} key={index} className={active === menuItems.navPath ? "active" + " inline-block ml-12 font-semibold text-sm pb-2" : "" + " inline-block ml-12 font-semibold text-sm pb-2"}>{menuItems.navTitle}</Link>
         })}
       </div>
     </nav>

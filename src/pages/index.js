@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => {
   const { designation, name, desciption } = data.site.siteMetadata
 
   useEffect(() => {
-    homePageAnimation(".headingAnimation", ".animateDesignation");
+    homePageAnimation(".headingAnimation", ".animateDesignation", ".animateDescription", ".animateButton");
   }, [])
 
   return (
@@ -18,8 +18,8 @@ const IndexPage = ({ data }) => {
         <div>
           <h2 className="font-bold headingAnimation">{name}</h2>
           <h3 className="animateDesignation">{designation}</h3>
-          <p>{desciption}</p>
-          <Link to="/portfolio" className={styles.btn}>My Portfolio</Link>
+          <p className="animateDescription">{desciption}</p>
+          <Link to="/portfolio" className={styles.btn + " animateButton"}>My Portfolio</Link>
         </div>
         <div className={styles.imgWrapper}>
           <img src="/banner.png" alt="site banner" />
